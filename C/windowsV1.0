@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <windows.h>
+//系统调用颜色后需要再次赋值？？
+//这里系统的功能用数组是最快最直接的  符合shell的方式   
+int main()
+{
+    char a[9]="color   ";
+    int i ,j,k;
+    printf("\t接下来是一个无伤大雅的小玩笑,\n\n\t请确保你现在处于无工作状态。\n\n");
+    system("pause");
+    Sleep(500);
+    printf("\n\t你确定自己处于无工作状态么？");
+    system("pause");
+    system("cls");
+    while (1)
+    {
+        for(i=1;i<9;i++)
+        {
+            for (j=8;j>1;j--)
+            {
+                printf("\n\n\n\n\n\n\n\n\n\n\t\t       先给你看看疯狂变色的窗口,\n\t\t       庆祝一下我终于编译成功了！！！！");
+                a[6]=(char)(((int)('0'))+i);
+                a[7]=(char)(((int)('0'))+j);
+                system(a);
+                Sleep(50);
+                system("cls");
+                //system("cls");
+            }
+        }
+        k++;
+        if (k>20){
+            system("color f0");
+            system("pause");
+        }
+		
+    }
+
+    return 0;
+}
