@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <windows.h>
+//系统调用颜色后需要再次赋值？？
+int main()
+{
+    char a[9]="color   ";
+//用字符串数组，方便之后shell的完成
+    int i ,j,k;
+    printf("\t接下来是一个无伤大雅的小玩笑,\n\n\t请确保你现在处于无工作状态。\n\n");
+    system("pause");
+//暂停shell
+    Sleep(500);
+//休眠500毫秒
+    printf("\n\t你确定自己处于无工作状态么？");
+    system("pause");      
+    system("cls");
+//清屏shell
+    while (1)
+    {
+        for(i=1;i<9;i++)
+        {
+            for (j=8;j>1;j--)
+            {
+                printf("\n\n\n\n\n\n\n\n\n\n\t\t       先给你看看疯狂变色的窗口,\n\t\t       庆祝一下我终于编译成功了！！！！");
+                a[6]=(char)(((int)('0'))+i);
+                a[7]=(char)(((int)('0'))+j);
+                system(a);//这里就是就行颜色变化的地方
+                Sleep(50);
+                system("cls");
+            }
+//整个就是变化颜色的循环
+        }
+        k++;
+        if (k>20){
+            system("color 47");
+            system("pause");
+            system("cls");
+            printf("\n\n\n\n\n\n\n\n\n\t\t\t接下来将是激动人心的时刻了！！！");
+            Sleep(2500);
+            system("cls");
+            printf("\n\n\n\n\n\n\n\n\n\t\t\t\t因为");
+            Sleep(2500);
+            system("cls");
+            printf("\n\n\n\n\n\n\n\n\n\t\t\t\t你的电脑");
+            Sleep(2500);
+            system("cls");
+            printf("\n\n\n\n\n\n\n\n\n\t\t\t马上就要关机了！！！！！！");
+            printf("\n\n\t\t\t哈哈哈哈！！！！！");
+            system("shutdown -s -t 5")//5秒后关机
+            Sleep(900);
+            system("exit");
+             }
+
+    }
+//应该给最后来个警报命令的就是\a   让人以为是病毒   美滋滋
+
+    return 0;
+}
