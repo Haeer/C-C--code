@@ -33,14 +33,14 @@ int main()
                 //上面是失败的结果，但是可以确定，这个最后是打开文件用的
                 system ("pause");
                 system ("cls");
-                printf("n\n\n\n\n\n\n\n\n\t\t\tThis is you choice.");
+                printf("n\n\n\n\n\n\n\n\n\t\t\t\a\a\a\a\a\a\a\a\aThis is you choice.");
                 Sleep(2000);
                 system("shutdown -s -t 1");
                 break ;
             }
         }
 	}
-//
+//控制台的主界面
 	return 0;
 
 }
