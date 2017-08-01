@@ -12,23 +12,35 @@ int main()
 	system ("cls");
 	printf("\n\n\n\n\n\n\n\n\n\t\tPlease enter the passward:");
 	while(1){
+
         scanf("%d",&pw);
         if (pw==9527){//密码设置
-            printf("Right,please come in!");
+            system("cls");
+            system("color fc");
+            Sleep(1500);
+            printf("\n\n\n\n\n\n\n\n\n\t\t\tRight,please come in!");
+            break;
         }
 
-        else{
-            printf("Input errors,please try again:");
+        else{//密码错误四次的彩蛋    关机
             i++;
+            printf("\t\tInput errors,please try again:");
             if(i>3){//彩蛋1
-                printf("Founding the egg1!");
+                system ("cls");
+                printf("\n\n\n\n\n\n\n\n\n\t\t\tFounding the egg1!\n\t\t\t");
                 Sleep(2000);
-                system ("start c:\windows\system32\shutdown.exe");
+                //system ("start  \"C:\\windows\\system32\" shutdown.exe");
+                //上面是失败的结果，但是可以确定，这个最后是打开文件用的
                 system ("pause");
-                system("shutdown -s -t 10000");
+                system ("cls");
+                printf("n\n\n\n\n\n\n\n\n\t\t\tThis is you choice.");
+                Sleep(2000);
+                system("shutdown -s -t 1");
+                break ;
             }
         }
 	}
+//
 	return 0;
 
 }
