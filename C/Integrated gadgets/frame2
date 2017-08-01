@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <windows.h>
+#include <math.h>
+#include <ctype.h>
+//正常运行后的退出程序
+//要求  1 询问是否退出
+//2 在灯光变换中关闭  或者音乐？？
+int main()
+{
+    char ex_1,ex_2;
+    //printf("%c\n",(char)(c);     这里C在没有添加符号的时候怎么修改都是错误，不知道原因
+    //printf("%c\n",'C');          添加单引号最终的结果是字母本身
+    //printf("%c\n","12");         添加双引号输出的都是<，原因未知
+    scanf("%c",&ex_1);
+    if (ex_1=='e'||ex_1=='E'){
+        printf("Wether to exit?\n");
+        scanf("%c",&ex_2);
+  	  if(ex_2=='y'||ex_2=='Y'){
+	  	printf ("Thanks!");
+        Sleep(1000);
+       	exit(-1);
+        }
+    }
+    return 0;
+}
