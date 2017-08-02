@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <windows.h>
+#include <math.h>
+#include <ctype.h>
+
+int main()
+{
+    printf ("\n\n\n\t\t\t\t    Gadgets");
+    printf("\n\n\t\t*************************************************");
+    printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t*************************************************");
+    getchar();
+    return 0;
+}
