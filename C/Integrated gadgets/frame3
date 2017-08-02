@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
 #include <math.h>
@@ -6,11 +5,22 @@
 //正常的输出界面，主要是*这个符号包围
 //在进行左右翻页的时候需要只接受而不反馈的函数
 //页面需要刷新后变化，这是最难的地方
+//感觉直接用函数输出*那个框子在填充文字的时候容易错乱
 int main()
 {
     printf ("\n\n\n\t\t\t\t    Gadgets");
     printf("\n\n\t\t*************************************************");
-    printf("\n\n\n\n\n\n\n\n\n\n\n\t");
+    printf("\n\t\t$");
+    printf("%-20c",'1');
+    printf("\n\t\t$");
+    printf("\n\t\t$");
+    printf("\n\t\t$");
+    printf("\n\t\t$");
+    printf("\n\t\t$");
+    printf("\n\t\t$");
+    printf("\n\t\t$");
+    printf("\n\t\t$");
+    printf("\n\t\t$");
     printf("\n\t\t*************************************************");
     printf("\n\t\t%c(previous)\t\t\t\t  (next)%c",17,16);
     getchar();
