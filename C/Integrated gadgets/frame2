@@ -14,12 +14,25 @@ int main()
     //printf("%c\n","12");         添加双引号输出的都是<，原因未知
     scanf("%c",&ex_1);
     if (ex_1=='e'||ex_1=='E'){
-        printf("Wether to exit?\n");
-        scanf("%c",&ex_2);
-  	  if(ex_2=='y'||ex_2=='Y'){
-	  	printf ("Thanks!");
+        system("cls");
+        printf("\n\n\n\n\n\n\n\n\n\t\t\t\tWether to exit?\n\t\t\t\t\t");
         Sleep(1000);
-       	exit(-1);
+
+    //scanf("%c",&ex_2);           使用这个函数的时候总是直接跳出来结果   原因未知
+        getchar();
+        ex_2=getchar();
+        if(ex_2=='y'||ex_2=='Y'){
+            system("cls");
+            printf ("\n\n\n\n\n\n\n\n\n\t\t\t\tThanks!Bye!");
+            system("color f0\a");
+            Sleep(700);
+            system("color f4");
+            Sleep(700);
+            system("color f6");
+            Sleep(700);
+            system("color f1\a");
+            Sleep(700);
+            exit(-1);
         }
     }
     return 0;
