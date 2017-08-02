@@ -3,7 +3,9 @@
 #include <windows.h>
 #include <math.h>
 #include <ctype.h>
-
+//正常的输出界面，主要是*这个符号包围
+//在进行左右翻页的时候需要只接受而不反馈的函数
+//页面需要刷新后变化，这是最难的地方
 int main()
 {
     printf ("\n\n\n\t\t\t\t    Gadgets");
