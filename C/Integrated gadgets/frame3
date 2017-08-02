@@ -8,7 +8,9 @@ int main()
 {
     printf ("\n\n\n\t\t\t\t    Gadgets");
     printf("\n\n\t\t*************************************************");
-    printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t*************************************************");
+    printf("\n\n\n\n\n\n\n\n\n\n\n\t");
+    printf("\n\t\t*************************************************");
+    printf("\n\t\t%c(previous)\t\t\t\t  (next)%c",17,16);
     getchar();
     return 0;
 }
