@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <windows.h>
+#include <math.h>
+#include <ctype.h>
+#define PI 3.14159265354
+#define pi 3.14159265354
+//gerch()函数得到一个字符，并且转换为ASCII码值，输出ASCII码
+//getche()同上，但是现实点的是原输入和ASCII
+int main()
+{
+    /*char a[6]="%.1lf";
+    printf("%c\n",a[0]);
+    printf("%c\n",a[1]);
+    printf("%d\n",(int)a[2]);
+    printf("%c\n",a[3]);
+    printf("%c\n",a[4]);
+    printf("%c\n",a[5]);
+    printf("%c\n",a[6]);
+   // printf(a,10.25);
+ */
+ //这里和当时是相同的，先使用sizeof来检测字符串的长度分配大小（其实可以不用分配），然后输出字符串来找到相应的位置
+ //值得一提的是这里的数字都是字符了，强制转换后还是ASCII码值     比如'0'就是48，所以数字就是前面的加上我们输入的就行了
+ //比如49这个数可以用（int）'0'+49来实现
+    char shuwei;
+    char num_1[6]="%.8lf";
+    printf("你要保留的小数位数是(0-9)：");
+    shuwei=getch();
+    if(!((int)shuwei>47&&(int)shuwei<58)){
+        system("exit");
+    }
+    num_1[2]=(char)shuwei;
+//选择保留的小数位位数
+    Sleep(500);
+    system("cls");
+    printf("");
+    printf("请选择你需要的地方");
+
+
+
+
+
+
+
+
+
+    return 0;
+}
+
