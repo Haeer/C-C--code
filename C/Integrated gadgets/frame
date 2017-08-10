@@ -1,0 +1,96 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <windows.h>
+#include <ctype.h>
+#include <math.h>
+//预测最后的结果是借助头文件封装部分函数来简化主程序
+//直接对功能进行模块化，选择功能使用光标（重点）
+
+
+//frame1
+//宏定义
+
+//frame2
+//正常运行后的退出程序
+//要求  1 询问是否退出
+//2 在灯光变换中关闭  或者音乐？？
+
+//frame3
+//正常的输出界面，主要是*这个符号包围
+//在进行左右翻页的时候需要只接受而不反馈的函数
+//页面需要刷新后变化，这是最难的地方
+//感觉直接用函数输出*那个框子在填充文字的时候容易错乱
+//想了一下，直接做成一整个不实际，不如分部做页面，然后引用如何？？
+int main()
+{
+	int pw,i=0;
+	char choice,ex;
+    //printf("%c\n",(char)(c);     这里C在没有添加符号的时候怎么修改都是错误，不知道原因
+    //printf("%c\n",'C');          添加单引号最终的结果是字母本身
+    //printf("%c\n","12");         添加双引号输出的都是<，原因未知
+	printf("\n\n\n\n\n\n\n\n\n\t\t\t\aWelcome to console!!!");//开场动画
+	//Sleep(5000);
+	system ("cls");
+	printf("\n\n\n\n\n\n\n\n\n\t\tPlease enter the passward:");
+	while(1){
+
+        scanf("%d",&pw);
+        if (pw==9527){//密码设置
+            system("cls");
+            system("color fc");
+            Sleep(1500);
+            printf("\n\n\n\n\n\n\n\n\n\t\t\tRight,please come in!");
+            break;
+        }
+
+        else{//密码错误四次的彩蛋    关机
+            i++;
+            printf("\t\tInput errors,please try again:");
+            if(i>3){//彩蛋1
+                system ("cls");
+                printf("\n\n\n\n\n\n\n\n\n\t\t\tFounding the egg1!\n\t\t\t");
+                Sleep(2000);
+                //system ("start  \"C:\\windows\\system32\" shutdown.exe");
+                //上面是失败的结果，但是可以确定，这个最后是打开文件用的
+                system ("pause");
+                system ("cls");
+                printf("n\n\n\n\n\n\n\n\n\t\t\t\a\a\a\a\a\a\a\a\aThis is you choice.");
+                Sleep(2000);
+                system("shutdown -s -t 1");
+                break ;
+            }
+        }
+	}
+//控制台的主界面
+//**************************************************退出程序
+	while (1){
+	scanf("%c",&choice);
+    if (choice =='e'||choice =='E'){
+        system("cls");
+        printf("\n\n\n\n\n\n\n\n\n\t\t\t\tWether to exit?\n\t\t\t\t\t");
+        Sleep(1000);
+
+    //scanf("%c",&ex_2);           使用这个函数的时候总是直接跳出来结果   原因未知
+		printf ("Do you want to exit?");
+        getchar();		
+        ex=getchar();
+        if(ex=='y'||ex=='Y'){
+            system("cls");
+            printf ("\n\n\n\n\n\n\n\n\n\t\t\t\tThanks!Bye!");
+            system("color f0\a");
+            Sleep(700);
+            system("color f4");
+            Sleep(700);
+            system("color f6");
+            Sleep(700);
+            system("color f1\a");
+            Sleep(700);
+            exit(-1);
+        }
+    }
+	}
+	return 0;
+//****************************************************退出程序
+}
+
+
